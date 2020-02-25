@@ -16,16 +16,16 @@ def get_users():
     return "Users list"
 
 
-@app.route('/users/<id:int>', methods=['GET'])
+@app.route('/users/<int:id>', methods=['GET'])
 def get_user_detail(id):
     return "User detail"
 
 
-@app.route('/users/<id:int>', methods=['PUT'])
+@app.route('/users/<int:id>', methods=['PUT'])
 def update_user(id):
     return "Update user"
 
 
-@app.route('/users/<id:int>', methods=['DELETE'])
+@app.route('/users/<int:id>', methods=['DELETE'])
 def delete_user(id):
     return "Delete user"
