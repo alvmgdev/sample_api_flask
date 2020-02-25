@@ -10,3 +10,7 @@ venv
 
 # Cache
 __pycache__
+
+# Sqlite
+*.sqlite
+*.db
