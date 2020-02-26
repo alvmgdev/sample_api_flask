@@ -4,7 +4,7 @@ A sample to show that implement an API in Flask it is easy.
 
 ### PREREQUISITES
 
-* Python 3
+* Python 3 & Virtualenv
 * CURL
 
 ### SETUP
@@ -13,7 +13,15 @@ A sample to show that implement an API in Flask it is easy.
 2. Open a terminal and move to the repository folder
 3. Create a virtualenv:
     ```
-    python3 -m venv .venv
+    virtualenv .venv -p python3
+    ```
+    P.D: If you do not have virtualenv installed, install it previously using:
+    ```
+    Unix:
+    sudo pip3 install virtualenv
+    
+    Windows:
+    pip3 install virtualenv
     ```
 4. Activate your virtualenv:
    ```
