@@ -36,7 +36,7 @@ def get_users():
 def get_user_detail(id):
     user = User.query.get(id)
     if not user:
-        abort(make_response(jsonify(error="User with id {} does not exists".format(id)), 404))
+        abort(make_response(jsonify(error="User with id {} does not exist".format(id)), 404))
 
     return jsonify(user_schema.dump(user))
 
@@ -45,7 +45,7 @@ def get_user_detail(id):
 def update_user(id):
     user = User.query.get(id)
     if not user:
-        abort(make_response(jsonify(error="User with id {} does not exists".format(id)), 404))
+        abort(make_response(jsonify(error="User with id {} does not exist".format(id)), 404))
 
     input_data = request.get_json()
     errors = user_schema.validate(input_data)
@@ -65,7 +65,7 @@ def update_user(id):
 def delete_user(id):
     user = User.query.get(id)
     if not user:
-        abort(make_response(jsonify(error="User with id {} does not exists".format(id)), 404))
+        abort(make_response(jsonify(error="User with id {} does not exist".format(id)), 404))
 
     db.session.delete(user)
     db.session.commit()
